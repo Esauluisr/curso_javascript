@@ -107,12 +107,116 @@ const suma = (a, b) => {
 } */
 
 // !Destructuracion
-
+/* 
 let nombre = "Luis";
 let edad = 20;
 
 console.log(`Número es: ${nombre} y la edad es: ${edad}`);
 console.log(`El nombre es: ${nombre} y la edad es: ${edad}`);
+ */
+
+// !funcionesdelDom
+/* const cambiarTexto = () => {
+  let titulo = document.getElementById("titulo");
+  if (titulo.innerText == "La lista de los leguajes de progrmacion") {
+    console.log(titulo.innerText);
+    titulo.innerText = "Javascript";
+    console.log(titulo.innerText);
+  } else {
+    titulo.innerText = "La lista de los leguajes de progrmacion";
+  }
+}; */
+
+/* const sumar = () => {
+  let num1 = document.getElementById("num1").value;
+  let num2 = document.getElementById("num2").value;
+  let resultado = parseFloat(num1) + parseFloat(num2);
+  document.getElementById("resultado").value = resultado;
+};
+
+const restar = () => {
+  let num1 = document.getElementById("num1").value;
+  let num2 = document.getElementById("num2").value;
+  let resultado = num1 - num2;
+  document.getElementById("resultado").value = resultado;
+};
+
+const multiplicar = () => {
+  let num1 = document.getElementById("num1").value;
+  let num2 = document.getElementById("num2").value;         
+  let resultado = num1 * num2;
+  document.getElementById("resultado").value = resultado;
+};  
+
+const dividir = () => {
+  let num1 = document.getElementById("num1").value;           
+  let num2 = document.getElementById("num2").value;
+  let resultado = num1 / num2;
+  document.getElementById("resultado").value = resultado; 
+};       */
+
+/* const calcular = (operacion) => {
+  if (operacion == "sumar") {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let resultado = parseFloat(num1) + parseFloat(num2);
+    document.getElementById("resultado").value = resultado;
+  } else if (operacion == "restar") {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let resultado = parseFloat(num1) + parseFloat(num2);
+    document.getElementById("resultado").value = resultado;
+  } else if (operacion == "multiplicar") {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let resultado = parseFloat(num1) + parseFloat(num2);
+    document.getElementById("resultado").value = resultado;
+  } else if (operacion == "dividir") {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let resultado = parseFloat(num1) + parseFloat(num2);
+    document.getElementById("resultado").value = resultado;
+  } else {
+    console.log("Operacion no valida");
+  }
+}; */
+
+// !clases
+// ?constructor padre
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`);
+  }
+}
+const persona1 = new Persona("Luis", 20);
+persona1.saludar();
+
+// ?constructor hijo
+class Materia extends Persona {
+  constructor(nombre, edad, materia, nivel) {
+    // ? llamando al constructor de la clase padre
+    super(nombre, edad);
+    this.materia = materia;
+    this.nivel = nivel;
+  }
+  saludar() {
+    console.log(
+      `hola mi no es ${this.nombre} y tengo ${this.edad} y estudio la materia de ${this.materia} 
+      y mi dificultad de la materia es ${this.nivel}`
+    );
+  }
+}
+// ?instanciando de clase padre que forma parte de la clase hijo
+const Mimateria = new Persona("Manuel", 20);
+Mimateria.saludar();
+
+// ?instanciando de clase hijo que hereda de la clase padre
+const materia1 = new Materia("Luis", 20, "Programacion", "Intenmedia");
+materia1.saludar();
 
 
 
