@@ -7,7 +7,7 @@ p{
 }
 
 h1 {
-    color: #1613c9;
+    color: #a513c9;
     font-family: cursive;
     font-size: 20px;
     text-align: center;
@@ -15,11 +15,10 @@ h1 {
 }
 
 
-nav>ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family:cursive;
-    color: rgb(223, 65, 8);
-    font-size: 20px;
+.button{
+    text-align: center;
+    color: chocolate;
+    margin: 10px;
+    padding: 10px;
+
 }
